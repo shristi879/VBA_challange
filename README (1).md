@@ -1,9 +1,9 @@
 
 # Stock Market Data
 
-you will use VBA scripting to analyse generated stock market data.
+You will use VBA scripting to analyse generated stock market data.
  
-#your Task
+#Your Task
 
 
 ## Before you begin
