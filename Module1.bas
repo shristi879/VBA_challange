@@ -50,9 +50,7 @@ Sub stock_results()
     
     'set close price
     Close Price = ws.Cells(i, 6).Value
-    
-    'set close price
-    close_Price = ws.Cells(1, 6).Value
+   
     
     'set open of each new ticker
     Dim New_year_Price As Boolean
