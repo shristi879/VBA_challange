@@ -23,7 +23,7 @@ Sub stock_results()
      ws.Cells(1, 13).Value = "Total Stock volume"
      
      
-     'create column headers for binus features
+     'create column headers for bonus features
      ws.Cells(1, 17).Value = "Ticker"
      ws.Cells(1, 18).Value = "value"
      
@@ -107,7 +107,7 @@ Sub stock_results()
     End If
     
         'convert yearly change column to show two decimal places and $
-        ws.Range("K" & Summary_Table_Row).NumberFormat = "0.00"
+        ws.Range("K" & Summary_Table_Row).NumberFormat = "$0.00"
         
         'convert percent change column to show two decimal places and %
         ws.Range("L" & Summary_Table_Row).NumberFormat = "0.00%"
@@ -118,11 +118,19 @@ Sub stock_results()
         ws.Range("R2") = Increase
         ws.Range("R3") = Decrease
         ws.Range("R4") = GTVolume
+
+
+set figures for Max Percentage, Min Percentage and Max Volume
+        Increase = WorksheetFunction.Max(ws.Range("L:L"))
+        Decrease = WorksheetFunction.Min(ws.Range("L:L"))
+        GTVolume = WorksheetFunction.Max(ws.Range("M:M"))
         
-        'set formatting to show two decimal places and %
+       
+'set formatting to show two decimal places and %
         ws.Range("R2:R3").NumberFormat = "0.00%"
         
-        'find matching ticker symbols for Max percentage, Min Percentage and MAx Volume
+      
+'find matching ticker symbols for Max percentage, Min Percentage and MAx Volume
         If ws.Cells(i, 12).Value = Increase Then
         ws.Range("Q2").Value = ws.Cells(i, 10).Value
         
