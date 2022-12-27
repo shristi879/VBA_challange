@@ -58,6 +58,6 @@ You will use VBA scripting to analyse generated stock market data.
 
 #Required
 
-#looping Across Worksheet 
+#Looping Across Worksheet 
 
 The VBA script can run on all sheets successfully.
